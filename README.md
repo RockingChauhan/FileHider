@@ -1,87 +1,58 @@
-Here is the complete `README.md` file for your `FileHider` project:
+## **FileHider**
 
-```markdown
-# FileHider
+**A Secure File Hiding Application**
 
-FileHider is a Java application designed to securely hide and unhide files using a MySQL database. The application allows users to manage their hidden files with functionality for hiding, unhiding, and viewing hidden files. It uses Java, Maven, and the SunMail library for sending OTPs.
+**Overview**
 
-## Features
+FileHider is a Java-based application designed to securely hide and unhide files using a MySQL database. It provides a user-friendly interface for managing hidden files, including the ability to hide, unhide, and view them. The application leverages robust security measures, such as OTP verification and database encryption, to protect sensitive information.
 
-- **Hide Files:** Allows users to hide files by storing their paths and content in a database.
-- **Unhide Files:** Retrieves and restores hidden files from the database.
-- **User Management:** Users can sign up and log in with OTP verification.
-- **Database Integration:** Uses MySQL for storing user and file information.
-- **Email Integration:** Sends OTPs using the SunMail library for email communication.
+**Features**
 
-## Technologies Used
+* **File Hiding:** Users can hide files by storing their paths and content in a MySQL database.
+* **File Unhiding:** Hidden files can be retrieved and restored from the database.
+* **User Management:** Users can sign up and log in with OTP verification for added security.
+* **Database Integration:** MySQL is used for storing user and file information.
+* **Email Integration:** The SunMail library is employed to send OTPs via email for user authentication.
 
-- **Java**: Programming language for the application.
-- **Maven**: Build tool for managing project dependencies and building the application.
-- **SunMail (JavaMail)**: Library for sending OTPs via email.
-- **MySQL**: Database for storing user and file data.
+**Technologies Used**
 
-## Setup and Installation
+* **Java:** The primary programming language for the application.
+* **Maven:** A build tool for managing project dependencies and building the application.
+* **SunMail (JavaMail):** A library for sending OTPs via email.
+* **MySQL:** A database for storing user and file data.
+
+**Getting Started**
 
 1. **Clone the Repository:**
-
    ```bash
-   git clone https://github.com/RockingChauhan/FileHider.git
+   git clone https://github.com/your-username/FileHider
    ```
-
-2. **Navigate to the Project Directory:**
-
+2. **Set Up Dependencies:**
    ```bash
    cd FileHider
+   mvn clean install
    ```
-
-3. **Install Dependencies:**
-
-   Ensure you have Maven installed. Run the following command to install project dependencies:
-
+3. **Configure Database:**
+   Create a MySQL database and user with appropriate privileges. Update the database connection details in the application's configuration file.
+4. **Run the Application:**
    ```bash
-   mvn install
+   java -jar target/FileHider-1.0.0-SNAPSHOT.jar
    ```
 
-4. **Configure Database:**
+**Usage**
 
-   - Create a MySQL database named `fileHider`.
-   - Import the schema and tables required for the project (you may need to refer to the project’s SQL scripts or documentation if available).
+1. **Create an Account:** Sign up for a new account by providing your email address and password.
+2. **Log In:** Enter your credentials to access the application.
+3. **Hide Files:** Select files to hide and provide a password for encryption.
+4. **Unhide Files:** Enter the correct password to retrieve and unhide your hidden files.
 
-5. **Update Email Configuration:**
+**Security**
 
-   - Open the `SendOTPService.java` file and update the `from` email address and password for sending OTPs.
-   - Ensure the email account used allows access from less secure apps or use an app-specific password.
+* **OTP Verification:** A one-time password is sent to the user's email for added security during login.
+* **Password Encryption:** Hidden files are encrypted using a strong algorithm to protect their content.
+* **Database Security:** The MySQL database should be configured with appropriate security measures, such as strong passwords and access controls.
 
-6. **Run the Application:**
+**Contributing**
 
-   Use the following Maven command to run the application:
+Contributions to FileHider are welcome! Feel free to submit bug reports, feature requests, or code improvements through GitHub issues or pull requests.
 
-   ```bash
-   mvn exec:java -Dexec.mainClass="org.example.Main"
-   ```
-
-## Usage
-
-1. **Launch the Application:**
-   - The application will display a welcome screen where you can choose to log in or sign up.
-
-2. **Log In or Sign Up:**
-   - Sign up with a new email and name.
-   - Log in with an existing email and verify using the OTP sent to your email.
-
-3. **Manage Files:**
-   - Use the provided options to hide, unhide, or view hidden files.
-
-## Contact
-
-For any questions or support, please contact:
-
-- **Name:** Sudhanshu Chauhan
-- **Email:** [sudhanshuchauhan.dev@gmail.com](mailto:sudhanshuchauhan.dev@gmail.com)
-
----
-
-Feel free to contribute or raise issues via the GitHub repository. Thank you for using FileHider!
-```
-
-You can copy and paste this content into a `README.md` file in your project’s root directory. Adjust any specific details as needed based on your project requirements.
