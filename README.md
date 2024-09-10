@@ -25,7 +25,7 @@ FileHider is a Java-based application designed to securely hide and unhide files
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/FileHider
+   git clone https://github.com/RockinChauhan/FileHider
    ```
 2. **Set Up Dependencies:**
    ```bash
